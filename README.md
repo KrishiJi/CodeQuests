@@ -97,27 +97,34 @@ Clone the project repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/CodeQuests.git
 
-### Step 2: Install Dependencies
-Navigate to the project folder and install dependencies for both the frontend and backend.
+```
 
-For the Backend:
+### Step 2: Install Dependencies
+
+Navigate to the project folder and install dependencies for both the **frontend** and **backend**.
+
+#### For the Backend:
+
 ```bash
 cd CodeQuests/backend
 npm install
+```
 
 For the Frontend:
 ```bash
 cd ../frontend
 npm install
+```
 
 ### Step 3: Configure Environment Variables
 Backend:
 Create a .env file in the backend folder and add your MongoDB URI for database connection:
 
-ini
+```ini
 
 MONGO_URI=mongodb://localhost:27017/codequests
 JWT_SECRET=your_jwt_secret_key
+```
 
 ### Step 4: Start the Backend
 Run the backend server:
@@ -126,6 +133,7 @@ Run the backend server:
 cd backend
 npm run dev
 The backend will be running on http://localhost:5000.
+```
 
 ### Step 5: Start the Frontend
 Now, run the React frontend:
@@ -134,47 +142,48 @@ Now, run the React frontend:
 cd frontend
 npm start
 The frontend will be running on http://localhost:3000.
+```
+---
 
-Frontend Usage
+## Frontend Usage
 Once the frontend is running, you can access the platform in your browser at http://localhost:3000.
 
-##Key Pages:
-##Login/Registration Page: Users can log in or register to track their solutions.
-##Home Page: Displays the daily challenge for the user.
-##Challenge Details: Users can click on the challenge to see the prompt, difficulty, and tags.
-##Solution Submission: After solving the challenge, users can submit their solutions.
-##View Solutions: After submitting a solution, users can view other users' solutions for the same challenge.
+### Key Pages:
+### Login/Registration Page: Users can log in or register to track their solutions.
+### Home Page: Displays the daily challenge for the user.
+### Challenge Details: Users can click on the challenge to see the prompt, difficulty, and tags.
+### Solution Submission: After solving the challenge, users can submit their solutions.
+### View Solutions: After submitting a solution, users can view other users' solutions for the same challenge.
 
-##Backend Usage
+## Backend Usage
 The backend provides the following API routes:
 
-#Auth Routes:
-POST /api/auth/register: Registers a new user.
-POST /api/auth/login: Logs in a user and provides a JWT token for authentication.
+### Auth Routes:
+- POST /api/auth/register: Registers a new user.
+- POST /api/auth/login: Logs in a user and provides a JWT token for authentication.
 
-#Challenge Routes:
-GET /api/challenges/today: Fetch the daily challenge for today.
-GET /api/challenges: Fetch a list of all challenges.
-POST /api/challenges/add: Admin route to add new challenges (requires authentication).
-GET /api/challenges/:id: Fetch details of a specific challenge by its ID.
+### Challenge Routes:
+- GET /api/challenges/today: Fetch the daily challenge for today.
+- GET /api/challenges: Fetch a list of all challenges.
+- POST /api/challenges/add: Admin route to add new challenges (requires authentication).
+- GET /api/challenges/:id: Fetch details of a specific challenge by its ID.
 
-#Solution Routes:
-POST /api/solutions/submit: Submit a solution for a challenge.
-GET /api/solutions/:challengeId: Get solutions for a specific challenge.
+### Solution Routes:
+- POST /api/solutions/submit: Submit a solution for a challenge.
+- GET /api/solutions/:challengeId: Get solutions for a specific challenge. 
 
-Contributing
+## Contributing
 We welcome contributions! If you'd like to contribute to this project, please follow these steps:
-Fork the repository.
-Clone your fork to your local machine.
-Create a new branch for your changes.
-Make your changes and test them.
-Commit your changes with meaningful messages.
-Push your changes to your fork.
-Submit a pull request.
+- Fork the repository.
+- Clone your fork to your local machine.
+- Create a new branch for your changes.
+- Make your changes and test them.
+- Commit your changes with meaningful messages.
+- Push your changes to your fork.
+- Submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
 Enjoy your coding journey with CodeQuests! 🚀
 
 ---
